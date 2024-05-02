@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraper Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: #000000;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 0 auto;
+            border: 2px solid #000000;
+        }
+        
+        th,
+        td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #ddd;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        table {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Scraper Result</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Property Name</th>
+                <th>Size of Land</th>
+                <th>Price</th>
+                <th>Owner Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item['Property Name'] }}</td>
+                <td>{{ item['Size of Land'] }}</td>
+                <td>{{ item['Price'] }}</td>
+                <td>{{ item['Owner Contact'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PropertyPass Home</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="DEALERLESS DEALS Home Page Template">
+    <meta name="keywords" content="DEALERLESS DEALS, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="./frontend/img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <!-- Compiled and minified Materialize CSS -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha256-OweaP/Ic6rsV+lysfyS4h+LM6sRwuO3euTYfr6M124g=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="font-awesome.min.css" />
+    <link rel="stylesheet" href="animate.css" />
+    <link rel="stylesheet" href="owl.carousel.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="s.scss" />
+
+
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+    <style>
+        footer {
+            background-image: url('static/Image/2.jpg');
+            color: #f2f2f2;
+            text-decoration: none;
+            display: flex;
+            margin: auto 0;
+        }
+        
+        .image-container {
+            width: 100vw;
+            /* 100% of the viewport width */
+            height: 100vh;
+            /* 100% of the viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            /* Hide overflowing parts */
+        }
+        /* Ensure the image fits within the container */
+        
+        .fullscreen-image {
+            max-width: 100%;
+            /* Maximum width within the container */
+            max-height: 100%;
+            /* Maximum height within the container */
+            display: block;
+            margin: auto;
+        }
+        /*           */
+        /*------------------
+  Header section
+---------------------*/
+        
+        .header-section {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 99;
+            color: black;
+        }
+        
+        .header-top {
+            padding: 12px 0;
+            border-bottom: 1px solid #667792;
+            /*margin-bottom: 40px;*/
+        }
+        
+        .top-info {
+            font-size: 14px;
+            color: #000000;
+            display: flexbox;
+        }
+        
+        .top-info i {
+            margin-right: 5px;
+        }
+        
+        .top-info:first-child {
+            margin-right: 0px;
+        }
+        
+        .top-social {
+            display: inline-block;
+        }
+        
+        .top-social a {
+            color: #000000;
+            margin: 0 10px;
+        }
+        
+        .user-panel {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        
+        .user-panel a {
+            color: #000000;
+            padding: 0 20px;
+            border-left: 1px solid #667792;
+        }
+        
+        .user-panel a i {
+            margin-right: 5px;
+        }
+        
+        .user-panel a:last-child {
+            margin-right: 0;
+        }
+        
+        .site-logo {
+            display: inline-block;
+        }
+        
+        .nav-switch {
+            display: none;
+        }
+        
+        .main-menu {
+            float: right;
+            list-style: none;
+        }
+        
+        .main-menu li {
+            display: inline;
+        }
+        
+        .main-menu li a {
+            display: inline-block;
+            color: #000000;
+            text-transform: uppercase;
+            margin-left: 30px;
+            padding: 12px 5px;
+            font-size: 14px;
+        }
+        
+        .main-menu li a:hover {
+            color: #30caa0;
+        }
+        /*------------------
+  Hero section
+---------------------*/
+        
+        .hero-section {
+            position: relative;
+            height: 870px;
+            margin-bottom: -54px;
+        }
+        
+        .hero-text {
+            padding-top: 600px;
+            text-align: center;
+        }
+        
+        .hero-text h2 {
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .hero-text p {
+            font-size: 22px;
+            margin-bottom: 50px;
+        }
+        /*------------------
+  Feature section
+---------------------*/
+        
+        .feature-section .container {
+            margin-bottom: -50px;
+        }
+        
+        .feature-item {
+            margin-bottom: 50px;
+        }
+        
+        .feature-item .room-price {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            background: #fff;
+            text-align: center;
+            padding: 13px;
+            background: #30caa0;
+            color: #fff;
+        }
+        
+        .feature-pic {
+            height: 250px;
+        }
+        
+        .feature-pic .sale-notic,
+        .feature-pic .rent-notic {
+            margin: 20px;
+        }
+        
+        .feature-text {
+            border-left: 1px solid #ebebeb;
+            border-right: 1px solid #ebebeb;
+        }
+        
+        .feature-title {
+            padding-top: 20px;
+        }
+        
+        .feature-title h5 {
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+        
+        .feature-title p {
+            margin-bottom: 0;
+        }
+        
+        .feature-title p i {
+            color: #30caa0;
+        }
+        
+        .room-info-warp {
+            padding: 25px;
+            padding-bottom: 0;
+        }
+        
+        .room-info {
+            border-top: 1px solid #ebebeb;
+            padding-top: 15px;
+            overflow: hidden;
+        }
+        
+        .room-info p {
+            margin-bottom: 15px;
+        }
+        
+        .room-info p i {
+            color: #30caa0;
+            margin-right: 10px;
+        }
+        
+        .room-info:last-child .rf-right {
+            padding-right: 14px;
+        }
+        
+        .room-info .rf-left {
+            float: left;
+        }
+        
+        .room-info .rf-right {
+            float: right;
+        }
+        
+        .hero-sectionset-bg {
+            color: black;
+            background-image: url('https://careers.vit.ac.in/images/vit/banner7.webp');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-sectionset-bg::before {
+            backdrop-filter: blur(5px);
+        }
+        
+        .container1 {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .house-card {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .house-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .house-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .house-details {
+            padding: 15px;
+        }
+        
+        h2,
+        p {
+            margin: 0;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #777;
+        }
+        
+        .but {
+            border-radius: .2rem;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-color: rgb(203, 203, 203);
+            color: #424242;
+            background-image: linear-gradient(45deg, rgb(42, 42, 42) 50%, transparent 50%);
+            background-position: 100%;
+            background-size: 400%;
+            transition: background 300ms ease-in-out;
+        }
+        
+        .but:hover {
+            color: aliceblue;
+            background-position: 0;
+        }
+        
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.2);
+            /* Adjust the alpha value to control transparency */
+            /* Adjust the blur radius as needed */
+            border-radius: 10px;
+            /* Adjust the border radius to your preference */
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            /* Adjust the border color and alpha value */
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            /* Adjust the shadow color and properties */
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #ffffff;
+            margin: 10px;
+            padding: 20px;
+            width: 1000px;
+            /* Adjust the width of the div */
+            height: 200px;
+            /* Adjust the height of the div */
+        }
+        /* Optional: Add hover effect */
+        
+        .glassmorphism:hover {
+            /* Adjust the hover shadow color and properties */
+            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(7px);
+            /* Adjust the hover translation */
+        }
+        
+        .link-button {
+            background-color: transparent;
+            border: none;
+            padding: 5px 10px;
+            color: #000000;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .link-button:hover {
+            color: #3d3d3d;
+            text-decoration: underline 2px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .glassmorphism {
+                width: 90%;
+                height: auto;
+                padding: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body style="font-family:Montserrat ; sans-serif;">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header section -->
+    <header class="header-section">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 header-top-left">
+                        <div class="top-info">
+                            Mini Project<br> Saharsh Justin Mathias - 20MIC0064<br> Ashish Gupta - 20MIC0019<br>Mir Adeem - 20MIC0022 <br> Gora Hemanth - 20MIC0043
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 text-lg-right header-top-right">
+                        <div class="top-social">
+                            <!-- <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+							<a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+							<a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+							<a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a> -->
+                        </div>
+                        <div style="font-size: 30px ; color: black;" class="user-panel">
+                            <strong>PropertyPass</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="site-navbar">
+                        <div class="nav-switch">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                        <ul class="main-menu">
+
+                            <li>
+                                <form method="GET" action="/view_aboutus">
+                                    <button type="submit" class="link-button">About us</button>
+                                </form>
+
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header section end -->
+
+
+    <!-- Hero section -->
+    <section class="hero-sectionset-bg">
+        <div class="container hero-text text-black" style="color: #000000;">
+            <center>
+                <div class="glassmorphism">
+                    <h2 style="color: #000000;">PropertyPass</h2>
+                    <p style="color: #000000;">A final destination place for transfer of property with the use of blockchain<br>SMARTER, SECURE & FASTER</p>
+
+                </div>
+            </center><br>
+        </div>
+    </section>
+    <!-- Hero section end -->
+
+
+    <!-- Services section -->
+    <!-- <section class="properties-section spad" id='content'></section> -->
+
+    <!-- Services section end -->
+
+    <!-- feature category section -->
+    <section class="feature-category-section spad">
+        <div class="container">
+            <div class="section-title text-center"><br>
+                <h3>LOOKING PROPERTY</h3>
+                <p>What kind of property are you looking for? We will help you</p>
+            </div>
+            <center>
+                <div class="container1">
+                    <div class="house-card">
+                        <img src="https://images.shiksha.com/mediadata/images/articles/1584528545phpdljDz1.jpeg" alt="House 1">
+                        <div class="house-details">
+                            <h5>VIT VELLORE</h5><br>
+                            <form method="GET" action="/view_buy">
+                                <input class="but" type="submit" value="BUY">
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="house-card">
+                        <img src="https://chennai.vit.ac.in/wp-content/uploads/2021/03/Why-choose-VIT-in-Chennai-Best-Engineering-college-in-Chennai.jpg" alt="House 2">
+                        <div class="house-details">
+                            <h5>VIT CHENNAI</h5><br>
+                            <form method="GET" action="/view_buy">
+                                <input class="but" type="submit" value="BUY">
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="house-card">
+                        <img src="https://vitbhopal.ac.in/file/2024/03/VITB-Background.jpeg" alt="House 2">
+                        <div class="house-details">
+                            <h5>VIT BHOPAL</h5><br>
+                            <form method="GET" action="/view_buy">
+                                <input class="but" type="submit" value="BUY">
+                            </form>
+
+                        </div>
+                    </div>
+            </center>
+
+            <center>
+                <BR>
+                <BR>
+                <form method="GET" action="/view_buyy">
+                    <input class="but" type="submit" value="Blockchain App">
+                </form>
+                <BR>
+                <BR>
+            </center>
+            <center><br><br>
+                <form action="/scrape" method="post">
+                    <label for="url"><h2>Enter Magicbricks URL:</h2></label><br>
+                    <input type="text" id="url" name="url"><br>
+                    <input class="but" type="submit" value="Submit">
+                </form><br><br>
+            </center>
+            </div>
+    </section>
+    <!-- feature category section end-->
+
+
+    <div class="modal fade" id="rentalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Rental Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group ">
+                            <div class="file-field input-group input-field">
+                                <input type="number" class="form-control" id="deposit" class="validate" />
+                                <label for="rental-deposit">Deposit</label>
+                                <div class="input-group-append">
+                                    <span class="input-group-text btn">ETH</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <div class="file-field input-field input-group">
+                                <input type="number" class="form-control" id="rent" class="validate" />
+                                <label for="rental-rent">Rent</label>
+                                <div class="input-group-append">
+                                    <span class="input-group-text btn">ETH</span>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="tokenId" />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="dApp.readyToRent(event)">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer-section set-bg" data-setbg="{{ url_for('static', filename='Image/2.jpg') }}">
+        <div class=" container ">
+            <div class="row ">
+                <div class="col-lg-3 col-md-6 footer-widget "><br><br>
+                    <img src="{{ url_for('static', filename='Image/logo.gif') }}" alt=" " height="100 " width="100 ">
+                    <p>Smarter, Safer & Faster</p>
+                    <p>A final destination place for transfer of property with the use of blockchain</p>
+
+                </div><br><br>
+                <div class="col-lg-3 col-md-6 footer-widget ">
+                    <div class="contact-widget "><br><br>
+                        <h5 class="fw-title ">CONTACT US</h5>
+                        <p><i class="fa fa-map-marker "></i>Vellore Institute of Technology, Vellore, Tamil Nadu, India</p>
+                        <p><i class="fa fa-clock-o "></i>Mon - Sat, 08 AM - 06 PM</p>
+                    </div>
+                </div><br><br>
+                <div class="col-lg-3 col-md-6 footer-widget ">
+                    <div class="double-menu-widget "><br><br>
+                        <h5 class="fw-title ">PropertyPass Features</h5>
+                        <ul>
+                            <li><a href=" ">Onwership Transfer</a></li>
+                            <li><a href=" ">Transparency</a></li>
+                            <li><a href=" ">Hash-Methods</a></li>
+                            <li><a href=" ">Decentralised Tech</a></li>
+                            <li><a href=" ">Flask</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget ">
+                    <div class="double-menu-widget "><br><br><br>
+                        <ul>
+                            <li><a href=" ">Dealerless</a></li>
+                            <li><a href=" ">Buying</a></li>
+                            <li><a href=" ">Renting</a></li>
+                            <li><a href=" ">Python</a></li>
+                            <li><a href=" ">Solidity</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+    <!-- Footer section end -->
+
+
+</body>
+
+</html>

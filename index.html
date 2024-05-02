@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Land Registery PropertyPass</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <!-- Compiled and minified Materialize CSS -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha256-OweaP/Ic6rsV+lysfyS4h+LM6sRwuO3euTYfr6M124g=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./frontend/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./frontend/css/animate.css" />
+    <link rel="stylesheet" href="./frontend/css/owl.carousel.css" />
+    <link rel="stylesheet" href="./frontend/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #021816;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        form {
+            margin: 0 auto;
+            width: 50%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        input[type=text],
+        input[type=number],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+        
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        input[type=submit]:focus {
+            outline: none;
+        }
+        
+        .image-container {
+            width: 100vw;
+            /* 100% of the viewport width */
+            height: 100vh;
+            /* 100% of the viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            /* Hide overflowing parts */
+        }
+        /* Ensure the image fits within the container */
+        
+        .fullscreen-image {
+            max-width: 100%;
+            /* Maximum width within the container */
+            max-height: 100%;
+            /* Maximum height within the container */
+            display: block;
+            margin: auto;
+        }
+        
+        footer {
+            background-image: url('static/Image/2.jpg');
+            color: #f2f2f2;
+            text-decoration: none;
+            display: flex;
+        }
+        
+        .ok {
+            font-size: large;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color:aliceblue" "">PropertyPass</h1>
+    <div class="image-container">
+        <img width="1500" height="900" src='https://careers.vit.ac.in/images/vit/banner7.webp' ; lass="fullscreen-image">
+    </div><br>
+    <form method="POST" action="/add_record">
+        <label class="ok" for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label class="ok" for="age">Age:</label>
+        <input type="number" id="age" name="age"><br>
+
+        <label class="ok" for="city">City:</label>
+        <input type="text" id="city" name="city"><br>
+
+        <label class="ok" for="coordinate">Coordinate:</label>
+        <input type="text" id="coordinate" name="coordinate"><br>
+
+        <label class="ok" for="land">Land:</label>
+        <textarea id="land" name="land"></textarea><br>
+
+        <label class="ok" for="uid">UID:</label>
+        <input type="number" id="uid" name="uid"><br>
+
+        <input type="submit" value="Add Record">
+    </form>
+    <br><br>
+    <form method="GET" action="/get_records">
+        <label class="ok" for="land">Land:</label>
+        <input type="text" id="land" name="land"><br>
+        <input type="submit" value="Get Record">
+    </form>
+    <br><br>
+    <form method="GET" action="/add_dummy">
+        <input type="submit" value="Add Data">
+    </form><br>
+    <form method="GET" action="/view_blockchain">
+        <input type="submit" value="View all Blockchain">
+    </form>
+
+    <br><br><br>
+
+    <footer class="footer-section set-bg" data-setbg="{{ url_for('static', filename='Image/2.jpg') }}">
+        <div class=" container ">
+            <div class="row ">
+                <div class="col-lg-3 col-md-6 footer-widget "><br><br>
+                    <img src="{{ url_for('static', filename='Image/logo.gif') }}" alt=" " height="100 " width="100 ">
+                    <p>Smarter, Safer & Faster</p>
+                    <p>A final destination place for transfer of property with the use of blockchain</p>
+
+                </div><br><br>
+                <div class="col-lg-3 col-md-6 footer-widget ">
+                    <div class="contact-widget "><br><br>
+                        <h5 class="fw-title ">CONTACT US</h5>
+                        <p><i class="fa fa-map-marker "></i>Vellore Institute of Technology, Vellore, Tamil Nadu, India</p>
+                        <p><i class="fa fa-clock-o "></i>Mon - Sat, 08 AM - 06 PM</p>
+                    </div>
+                </div><br><br>
+                <div class="col-lg-3 col-md-6 footer-widget ">
+                    <div class="double-menu-widget "><br><br>
+                        <h5 class="fw-title ">PropertyPass Features</h5>
+                        <ul>
+                            <li><a href=" ">Onwership Transfer</a></li>
+                            <li><a href=" ">Transparency</a></li>
+                            <li><a href=" ">Hash-Methods</a></li>
+                            <li><a href=" ">Decentralised Tech</a></li>
+                            <li><a href=" ">Flask</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget ">
+                    <div class="double-menu-widget "><br><br><br>
+                        <ul>
+                            <li><a href=" ">Dealerless</a></li>
+                            <li><a href=" ">Buying</a></li>
+                            <li><a href=" ">Renting</a></li>
+                            <li><a href=" ">Python</a></li>
+                            <li><a href=" ">Solidity</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js " integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin=" anonymous "></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
+
+    <script src="./frontend/js/owl.carousel.min.js "></script>
+    <script src="./frontend/js/masonry.pkgd.min.js "></script>
+    <script src="./frontend/js/magnific-popup.min.js "></script>
+    <!-- Compiled and minified JavaScript for Materialize CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js " integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin=" anonymous "></script>
+    <!-- Web3.js -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.2.5-rc.0/dist/web3.min.js " integrity="sha256-ZjUHyLZZWkQPbWfRjTSmGtfcTSOermVT6f/CvJW2RY4=" crossorigin=" anonymous "></script>
+    <!-- dApp JavaScript -->
+    <script src="./dapp.js "></script>
+    <script src="./frontend/js/main.js "></script>
+    <script>
+    </script>
+
+</body>
+
+</html>

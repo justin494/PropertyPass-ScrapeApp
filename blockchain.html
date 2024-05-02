@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blockchain Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #021816;
+        }
+        
+        h1 {
+            color: aliceblue;
+            text-align: center;
+            font-size: 36px;
+            margin-top: 50px;
+        }
+        
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background-color: #f2f2f2;
+        }
+        
+        th {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: normal;
+        }
+        
+        td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #ddd;
+        }
+        
+        @media screen and (max-width: 768px) {
+            table {
+                width: 100%;
+            }
+            th,
+            td {
+                padding: 8px;
+                font-size: 14px;
+            }
+            th {
+                font-size: 16px;
+            }
+            tr {
+                display: block;
+                border-bottom: 2px solid #ddd;
+            }
+            td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                text-transform: uppercase;
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Blockchain Viewer</h1>
+    <table>
+        <tr>
+            <th>Timestamp</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>UID</th>
+            <th>City</th>
+            <th>Coordinates</th>
+            <th>Land </th>
+            <th>Hash</th>
+            <th>Previous Hash</th>
+        </tr>
+        {% for block in blockchain %}
+        <tr>
+            <td>{{ block.timestamp }}</td>
+            <td>{{ block.name }}</td>
+            <td>{{ block.age }}</td>
+            <td>{{ block.uid }}</td>
+            <td>{{ block.city }}</td>
+            <td>{{ block.coordinate }}</td>
+            <td>{{ block.land }}</td>
+            <td>{{ block.hash }}</td>
+            <td>{{ block.previous_hash }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
